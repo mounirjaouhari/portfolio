@@ -162,3 +162,93 @@ function switchLang(lang) {
 
 btnFr.addEventListener("click", () => switchLang('fr'));
 btnEn.addEventListener("click", () => switchLang('en'));
+
+
+// --- SCROLL ANIMATIONS ---
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -20px 0px"
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('section, header').forEach(el => {
+    el.classList.add('animate-section');
+    observer.observe(el);
+});
+
+// --- DATA NETWORK ANIMATION (CANVAS) ---
+// Symbolise les flux de données (Data Engineering) et les graphes (Mathématiques)
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+let width, height, particles;
+
+function initCanvas() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    particles = [];
+    // Densité ajustée pour ne pas surcharger
+    const particleCount = Math.min(Math.floor(window.innerWidth / 20), 100); 
+    
+    for (let i = 0; i < particleCount; i++) {
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.6,
+            vy: (Math.random() - 0.5) * 0.6,
+            radius: Math.random() * 2 + 1.5
+        });
+    }
+}
+
+function drawNetwork() {
+    ctx.clearRect(0, 0, width, height);
+    
+    const isDark = document.body.classList.contains('dark-mode');
+    const color = isDark ? 'rgba(77, 163, 255,' : 'rgba(0, 86, 179,';
+    
+    particles.forEach((p, i) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        
+        // Rebondir sur les bords
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+        
+        // Dessiner le point (nœud de donnée)
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = color + ' 0.6)';
+        ctx.fill();
+        
+        // Dessiner les connexions (graphe, flux de données)
+        for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+            
+            if (dist < 130) {
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = color + ` ${1 - dist/130})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
+        }
+    });
+    
+    requestAnimationFrame(drawNetwork);
+}
+
+// Relancer l'animation si la fenêtre change de taille
+window.addEventListener('resize', initCanvas);
+
+// Démarrer
+initCanvas();
+drawNetwork();
