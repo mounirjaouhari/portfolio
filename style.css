@@ -457,6 +457,49 @@ header .navbar ul li a.active {
     transition: .3s;
 }
 
+/* Articles / Publications Section */
+.articles .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+.articles .box {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    overflow: hidden;
+    transition: .3s;
+}
+.articles .box:hover {
+    transform: translateY(-5px);
+}
+.articles .box .image {
+    height: 20rem;
+    background: #e6f0fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.articles .box .image .document-icon {
+    font-size: 8rem;
+    color: #011aff;
+}
+.articles .box .content {
+    padding: 2rem;
+}
+.articles .box .content h3 {
+    font-size: 1.8rem;
+    color: #0e2431;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+.articles .box .content p {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
 /* Footer */
 footer {
     text-align: center;

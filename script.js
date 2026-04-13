@@ -6,6 +6,7 @@ const translations = {
         nav_skills: "Compétences",
         nav_exp: "Expérience",
         nav_edu: "Formation",
+        nav_articles: "Publications",
         
         home_hi: "Bonjour, je suis",
         home_im: "Je suis ",
@@ -39,6 +40,11 @@ const translations = {
         edu3_title: "Master Mathématiques",
         edu3_desc: "Analyse Numérique, Probabilités-Statistiques, Algorithmique Avancée.",
         
+        pub_title: "Mes",
+        pub1_title: "Interface Homogenization of a Periodic Array of Linear Viscoelastic Inclusions",
+        pub1_desc: "A Matched Asymptotic Expansion Approach for Helmholtz problem. Étude et modélisation en mathématiques appliquées pour la propagation d'ondes.",
+        pub_btn: "Lire l'article",
+        
         footer_text: "Conçu avec passion © 2026 Mounir JAOUHARI. Tous droits réservés.",
         
         typed_strings: ["Ingénieur de Données", "Doctorant-Chercheur", "Développeur Python", "Consultant"],
@@ -50,6 +56,7 @@ const translations = {
         nav_skills: "Skills",
         nav_exp: "Experience",
         nav_edu: "Education",
+        nav_articles: "Publications",
         
         home_hi: "Hello, I am",
         home_im: "I am a ",
@@ -82,6 +89,11 @@ const translations = {
         edu2_desc: "Wave Propagation Modeling (Numerical Analysis, FEM Simulation).",
         edu3_title: "Master in Mathematics",
         edu3_desc: "Numerical Analysis, Probability-Statistics, Advanced Algorithms.",
+        
+        pub_title: "My",
+        pub1_title: "Interface Homogenization of a Periodic Array of Linear Viscoelastic Inclusions",
+        pub1_desc: "A Matched Asymptotic Expansion Approach for Helmholtz problem. Applied mathematics modeling and study for wave propagation.",
+        pub_btn: "Read Article",
         
         footer_text: "Designed with passion © 2026 Mounir JAOUHARI. All rights reserved.",
         
@@ -187,6 +199,7 @@ ScrollReveal().reveal('.about .content', { delay: 400, origin: 'bottom', distanc
 ScrollReveal().reveal('.skills .box', { delay: 300, origin: 'bottom', distance: '50px', interval: 200 });
 ScrollReveal().reveal('.timeline .container', { delay: 300, origin: 'bottom', distance: '50px', interval: 200 });
 ScrollReveal().reveal('.education .box', { delay: 300, origin: 'bottom', distance: '50px', interval: 200 });
+ScrollReveal().reveal('.articles .box', { delay: 300, origin: 'bottom', distance: '50px', interval: 200 });
 
 /* ===== PARTICLES.JS ===== */
 particlesJS('particles-js', {
