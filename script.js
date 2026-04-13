@@ -17,7 +17,7 @@ const translations = {
         job1_desc: `<li>Architecture d’un système distribué (Apache NiFi → Kafka → ClickHouse) pour l’ingestion massive de flux IoT hétérogènes.</li>
                     <li>Déploiement opérationnel de modèles prédictifs (RandomForest, XGBoost) et d’un assistant IA générative (API Agri-Copilot) pour l’agriculture de précision.</li>
                     <li>Mise en œuvre d’une gouvernance stricte des données garantissant une intégrité de 99,98%.</li>
-                    <li><strong>Environnement Technique :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit. <a href="https://github.com/mounirjaouhari" target="_blank" class="code-link">[Code Source]</a></li>`,
+                    <li><strong>Environnement Technique :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit. <a href="https://github.com/mounirjaouhari/Vertiflow" target="_blank" class="code-link">[Code Source]</a></li>`,
         job2_title: "Doctorant-Chercheur en Mathématiques Appliquées",
         job2_date: "Déc. 2020 – À ce jour",
         job2_desc: `<li>Modélisation avancée de systèmes complexes (Équations aux Dérivées Partielles) et simulation numérique (Méthode des Éléments Finis - FEM) via Python (NumPy, SciPy, Pandas).</li>
@@ -70,7 +70,7 @@ const translations = {
         job1_desc: `<li>Designed a distributed data architecture (Apache NiFi → Kafka → ClickHouse) for heterogeneous IoT data ingestion.</li>
                     <li>Deployed predictive models (RandomForest, XGBoost) and a RAG assistant (Agri-Copilot API) for precision agriculture.</li>
                     <li>Implemented strict governance (JSON Schema Validation, DLQ) ensuring 99.98% data integrity.</li>
-                    <li><strong>Stack :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit. <a href="https://github.com/mounirjaouhari" target="_blank" class="code-link">[Source Code]</a></li>`,
+                    <li><strong>Stack :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit. <a href="https://github.com/mounirjaouhari/Vertiflow" target="_blank" class="code-link">[Source Code]</a></li>`,
         job2_title: "Ph.D. Researcher in Applied Mathematics",
         job2_date: "Dec. 2020 – Present",
         job2_desc: `<li>Modeling of complex systems (PDE) and numerical simulation (FEM) in Python (NumPy, SciPy, Pandas).</li>
