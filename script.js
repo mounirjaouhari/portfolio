@@ -24,6 +24,7 @@ const translations = {
         skill_cloud: "Cloud Computing",
         skill_ds: "Science des Données",
         skill_tools: "Outils & Méthodes",
+        skill_certified: "Certifié",
         skill_math: "Modélisation Math.",
         skill_math_desc: "Équations aux Dérivées Partielles (EDP), Méthodes des Éléments Finis (FEM), Analyse Numérique, Processus Stochastiques.",
         
@@ -92,6 +93,7 @@ const translations = {
         skill_cloud: "Cloud Computing",
         skill_ds: "Data Science",
         skill_tools: "Tools & Methods",
+        skill_certified: "Certified",
         skill_math: "Mathematical Modeling",
         skill_math_desc: "Partial Differential Equations (PDE), Finite Element Methods (FEM), Numerical Analysis, Stochastic Processes.",
         
