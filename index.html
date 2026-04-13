@@ -197,16 +197,21 @@
             <div class="image tilt" data-tilt>
                 <img src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-3483604-2912020.png" alt="Contact">
             </div>
-            <form action="#">
+            <form action="https://formsubmit.co/mounirjaouhari@gmail.com" method="POST">
+                <!-- Configuration FormSubmit -->
+                <input type="hidden" name="_subject" value="Nouveau message depuis votre Portfolio !">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="true">
+                
                 <div class="inputBox">
-                    <input type="text" placeholder="Nom" data-i18n-placeholder="contact_name" required>
-                    <input type="email" placeholder="Email" data-i18n-placeholder="contact_email" required>
+                    <input type="text" name="Nom" placeholder="Nom" data-i18n-placeholder="contact_name" required>
+                    <input type="email" name="Email" placeholder="Email" data-i18n-placeholder="contact_email" required>
                 </div>
                 <div class="inputBox">
-                    <input type="number" placeholder="Téléphone" data-i18n-placeholder="contact_phone">
-                    <input type="text" placeholder="Sujet" data-i18n-placeholder="contact_subject">
+                    <input type="number" name="Téléphone" placeholder="Téléphone" data-i18n-placeholder="contact_phone">
+                    <input type="text" name="Sujet" placeholder="Sujet" data-i18n-placeholder="contact_subject">
                 </div>
-                <textarea placeholder="Votre message..." cols="30" rows="10" data-i18n-placeholder="contact_msg" required></textarea>
+                <textarea name="Message" placeholder="Votre message..." cols="30" rows="10" data-i18n-placeholder="contact_msg" required></textarea>
                 <input type="submit" value="Envoyer le message" class="btn" data-i18n-value="contact_send">
             </form>
         </div>
