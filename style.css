@@ -541,3 +541,161 @@ footer {
 @media(max-width:450px){
     html { font-size: 50%; }
 }
+
+/* ===== DARK MODE ===== */
+body.dark {
+    background: #111;
+    color: #fff;
+}
+body.dark header, 
+body.dark .about .row, 
+body.dark .skills .box, 
+body.dark .timeline .content,
+body.dark .education .box,
+body.dark .articles .box,
+body.dark .contact .row form,
+body.dark footer {
+    background: #222;
+    color: #fff;
+    border: none;
+}
+body.dark header {
+    box-shadow: 0 .5rem 1rem rgba(255,255,255,.05);
+}
+body.dark header .logo, 
+body.dark header .navbar ul li a, 
+body.dark #menu,
+body.dark #theme-btn,
+body.dark .home .content h2,
+body.dark .home .content h1,
+body.dark .home .content p,
+body.dark .about .content h3,
+body.dark .about .box-container .box p,
+body.dark .skills .box h3,
+body.dark .timeline .content h3,
+body.dark .timeline .content p,
+body.dark .education .box h3,
+body.dark .education .box p,
+body.dark .articles .box .content h3,
+body.dark .articles .box .content p,
+body.dark .heading {
+    color: #fff;
+}
+body.dark .contact form .inputBox input, body.dark .contact form textarea {
+    background: #333;
+    color: #fff;
+}
+
+#theme-btn {
+    font-size: 2.2rem;
+    color: #0e2431;
+    cursor: pointer;
+    margin-left: 2rem;
+    transition: .3s;
+}
+#theme-btn:hover {
+    color: #011aff;
+}
+
+/* ===== CUSTOM CURSOR ===== */
+.cursor-1 {
+    position: absolute;
+    top: 0; left: 0;
+    width: 3rem; height: 3rem;
+    border: .2rem solid #011aff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    transition: .1s;
+}
+.cursor-2 {
+    position: absolute;
+    top: 0; left: 0;
+    width: .8rem; height: .8rem;
+    background: #011aff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+body.active-cursor .cursor-1 {
+    transform: translate(-50%, -50%) scale(1.5);
+    background: rgba(1, 26, 255, 0.1);
+}
+body.active-cursor .cursor-2 {
+    opacity: 0;
+}
+
+/* ===== SCROLL TOP BUTTON ===== */
+.scroll-top {
+    position: fixed;
+    bottom: -10rem;
+    right: 2rem;
+    background: #011aff;
+    color: #fff;
+    padding: 1.2rem 1.5rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    z-index: 1000;
+    transition: .3s;
+}
+.scroll-top.active {
+    bottom: 2rem;
+}
+.scroll-top:hover {
+    background: #ff7b00;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.contact .row .image {
+    flex: 1 1 40rem;
+}
+.contact .row .image img {
+    width: 100%;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.1));
+}
+.contact .row form {
+    flex: 1 1 40rem;
+    padding: 3rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border-radius: 1rem;
+    background: #fff;
+}
+.contact .row form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact .row form .inputBox input, .contact .row form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #333;
+    margin: 1rem 0;
+    background: #f7f7f7;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    transition: .3s;
+}
+.contact .row form .inputBox input:focus, .contact .row form textarea:focus {
+    border-color: #011aff;
+    background: transparent;
+}
+.contact .row form .inputBox input {
+    width: 49%;
+}
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+@media(max-width:768px) {
+    .contact .row form .inputBox input { width: 100%; }
+}

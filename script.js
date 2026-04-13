@@ -7,6 +7,7 @@ const translations = {
         nav_exp: "Expérience",
         nav_edu: "Formation",
         nav_articles: "Publications",
+        nav_contact: "Contact",
         
         home_hi: "Bonjour, je suis",
         home_im: "Je suis ",
@@ -45,6 +46,14 @@ const translations = {
         pub1_desc: "A Matched Asymptotic Expansion Approach for Helmholtz problem. Étude et modélisation en mathématiques appliquées pour la propagation d'ondes.",
         pub_btn: "Lire l'article",
         
+        contact_title: "Contactez-",
+        contact_name: "Nom",
+        contact_email: "Email",
+        contact_phone: "Téléphone",
+        contact_subject: "Sujet",
+        contact_msg: "Votre message...",
+        contact_send: "Envoyer le message",
+
         footer_text: "Conçu avec passion © 2026 Mounir JAOUHARI. Tous droits réservés.",
         
         typed_strings: ["Ingénieur de Données", "Doctorant-Chercheur", "Développeur Python", "Consultant"],
@@ -57,6 +66,7 @@ const translations = {
         nav_exp: "Experience",
         nav_edu: "Education",
         nav_articles: "Publications",
+        nav_contact: "Contact",
         
         home_hi: "Hello, I am",
         home_im: "I am a ",
@@ -95,6 +105,14 @@ const translations = {
         pub1_desc: "A Matched Asymptotic Expansion Approach for Helmholtz problem. Applied mathematics modeling and study for wave propagation.",
         pub_btn: "Read Article",
         
+        contact_title: "Contact ",
+        contact_name: "Name",
+        contact_email: "Email",
+        contact_phone: "Phone",
+        contact_subject: "Subject",
+        contact_msg: "Your message...",
+        contact_send: "Send Message",
+
         footer_text: "Designed with passion © 2026 Mounir JAOUHARI. All rights reserved.",
         
         typed_strings: ["Data Engineer", "Ph.D. Researcher", "Python Developer", "Consultant"],
@@ -108,6 +126,19 @@ $(document).ready(function(){
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('active');
     });
+
+    // Dark mode toggle
+    $('#theme-btn').click(function(){
+        $(this).toggleClass('fa-sun');
+        $('body').toggleClass('dark');
+    });
+
+    let top = $(window).scrollTop();
+    if(top > 0) {
+        $('.scroll-top').addClass('active');
+    } else {
+        $('.scroll-top').removeClass('active');
+    }
 
     $(window).on('scroll load', function(){
         $('#menu').removeClass('fa-times');
@@ -160,6 +191,15 @@ function switchLang(lang) {
     });
 
     if(cvLink) cvLink.href = translations[lang].cv_link;
+    
+    $("[data-i18n-placeholder]").each(function() {
+        const key = $(this).attr("data-i18n-placeholder");
+        if(translations[lang][key]) $(this).attr("placeholder", translations[lang][key]);
+    });
+    $("[data-i18n-value]").each(function() {
+        const key = $(this).attr("data-i18n-value");
+        if(translations[lang][key]) $(this).val(translations[lang][key]);
+    });
 
     if (lang === 'fr') {
         btnFr.classList.add('active');
@@ -200,6 +240,7 @@ ScrollReveal().reveal('.skills .box', { delay: 300, origin: 'bottom', distance: 
 ScrollReveal().reveal('.timeline .container', { delay: 300, origin: 'bottom', distance: '50px', interval: 200 });
 ScrollReveal().reveal('.education .box', { delay: 300, origin: 'bottom', distance: '50px', interval: 200 });
 ScrollReveal().reveal('.articles .box', { delay: 300, origin: 'bottom', distance: '50px', interval: 200 });
+ScrollReveal().reveal('.contact .row', { delay: 300, origin: 'bottom', distance: '50px' });
 
 /* ===== PARTICLES.JS ===== */
 particlesJS('particles-js', {
@@ -218,4 +259,25 @@ particlesJS('particles-js', {
     "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
   },
   "retina_detect": true
+});
+
+
+/* ===== CUSTOM CURSOR ===== */
+let cursor1 = document.querySelector('.cursor-1');
+let cursor2 = document.querySelector('.cursor-2');
+
+window.onmousemove = (e) => {
+    cursor1.style.top = e.clientY + 'px';
+    cursor1.style.left = e.clientX + 'px';
+    cursor2.style.top = e.clientY + 'px';
+    cursor2.style.left = e.clientX + 'px';
+}
+
+document.querySelectorAll('a, .btn, button, #theme-btn, #menu').forEach(links => {
+    links.onmouseenter = () => {
+        document.body.classList.add('active-cursor');
+    }
+    links.onmouseleave = () => {
+        document.body.classList.remove('active-cursor');
+    }
 });

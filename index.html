@@ -14,11 +14,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-1"></div>
+    <div class="cursor-2"></div>
 
     <!-- NAVBAR -->
     <header>
         <a href="#home" class="logo"><i class="fas fa-database"></i> Mounir<span>.</span></a>
         <div id="menu" class="fas fa-bars"></div>
+        <div id="theme-btn" class="fas fa-moon"></div>
         <nav class="navbar">
             <ul>
                 <li><a class="active" href="#home" data-i18n="nav_home">Accueil</a></li>
@@ -27,6 +31,7 @@
                 <li><a href="#experience" data-i18n="nav_exp">Expérience</a></li>
                 <li><a href="#education" data-i18n="nav_edu">Formation</a></li>
                 <li><a href="#articles" data-i18n="nav_articles">Publications</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
             </ul>
         </nav>
         <div class="lang-switch">
@@ -184,6 +189,29 @@
         </div>
     </section>
 
+    
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <h2 class="heading"><i class="fas fa-headset"></i> <span data-i18n="contact_title">Contactez-</span><span>Moi</span></h2>
+        <div class="row">
+            <div class="image tilt" data-tilt>
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-3483604-2912020.png" alt="Contact">
+            </div>
+            <form action="#">
+                <div class="inputBox">
+                    <input type="text" placeholder="Nom" data-i18n-placeholder="contact_name" required>
+                    <input type="email" placeholder="Email" data-i18n-placeholder="contact_email" required>
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Téléphone" data-i18n-placeholder="contact_phone">
+                    <input type="text" placeholder="Sujet" data-i18n-placeholder="contact_subject">
+                </div>
+                <textarea placeholder="Votre message..." cols="30" rows="10" data-i18n-placeholder="contact_msg" required></textarea>
+                <input type="submit" value="Envoyer le message" class="btn" data-i18n-value="contact_send">
+            </form>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
         <p data-i18n="footer_text">Conçu avec passion © 2026 Mounir JAOUHARI. Tous droits réservés.</p>
@@ -196,6 +224,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
+
+    <!-- SCROLL TOP -->
+    <a href="#home" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
 </body>
 </html>
