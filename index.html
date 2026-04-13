@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mounir JAOUHARI - CV</title>
+    <title>Mounir JAOUHARI - Portfolio & CV</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="lang-switch">
-        <button id="btn-fr" class="active">Français</button>
-        <button id="btn-en">English</button>
+    <div class="top-bar">
+        <button id="theme-toggle" class="theme-switch" title="Activer le mode sombre">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="lang-switch">
+            <button id="btn-fr" class="active">Français</button>
+            <button id="btn-en">English</button>
+        </div>
     </div>
 
     <div class="container">
         <!-- HEADER -->
         <header>
+            <div class="profile-picture">
+                <!-- Placez une image nommée "photo.jpg" dans le même dossier -->
+                <img src="photo.jpg" alt="Mounir JAOUHARI" onerror="this.src='https://ui-avatars.com/api/?name=Mounir+Jaouhari&background=0D8ABC&color=fff&size=150&font-size=0.4'">
+            </div>
             <h1>Mounir JAOUHARI</h1>
+            
             <div class="contact-info">
                 <span><i class="fas fa-map-marker-alt"></i> <span data-i18n="location">Casablanca, Maroc</span></span>
                 <span><i class="fas fa-envelope"></i> <a href="mailto:mounirjaouhari@gmail.com">mounirjaouhari@gmail.com</a></span>
@@ -24,7 +34,19 @@
                 <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/mounirjaouhari" target="_blank">linkedin.com/in/mounirjaouhari</a></span>
                 <span><i class="fab fa-github"></i> <a href="https://github.com/mounirjaouhari" target="_blank">github.com/mounirjaouhari</a></span>
             </div>
+
+            <div class="download-section">
+                <a href="cv_mounir_jaouhari.pdf" id="download-cv" class="btn-download" target="_blank">
+                    <i class="fas fa-file-pdf"></i> <span data-i18n="download_cv">Télécharger mon CV (PDF)</span>
+                </a>
+            </div>
         </header>
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome-section">
+            <h2 data-i18n="welcome_title">BIENVENUE SUR MON PORTFOLIO</h2>
+            <p data-i18n="welcome_desc">Bonjour ! Je suis Mounir, passionné par la modélisation mathématique et l'ingénierie des données. Sur cette page, vous découvrirez mon parcours hybride, mêlant recherche scientifique rigoureuse et développement de solutions industrielles robustes.</p>
+        </section>
 
         <!-- PROFILE -->
         <section>
@@ -45,8 +67,8 @@
                 <ul data-i18n-html="job1_desc">
                     <li>Architecture d’un système distribué (Apache NiFi → Kafka → ClickHouse) pour l’ingestion massive de flux IoT hétérogènes.</li>
                     <li>Déploiement opérationnel de modèles prédictifs (RandomForest, XGBoost) et d’un assistant IA générative (API Agri-Copilot) pour l’agriculture de précision.</li>
-                    <li>Mise en œuvre d’une gouvernance stricte des données (Validation JSON Schema, Files de Lettres Mortes) garantissant une intégrité de 99,98%.</li>
-                    <li><strong>Environnement Technique :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit.</li>
+                    <li>Mise en œuvre d’une gouvernance stricte des données garantissant une intégrité de 99,98%.</li>
+                    <li><strong>Environnement Technique :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit. <a href="https://github.com/mounirjaouhari" target="_blank" class="code-link">[Code Source]</a></li>
                 </ul>
             </div>
 
@@ -68,8 +90,8 @@
                     <span class="date">2016 – 2026</span>
                 </div>
                 <ul data-i18n-html="job3_desc">
-                    <li><strong>ENS Casablanca (2025-26):</strong> Enseignement en Modélisation Stochastique & Analyse Statistique (Master/Licence).</li>
-                    <li><strong>Ministère Éduc. Nationale (2016-24):</strong> Professeur de Mathématiques (8 ans d'expérience).</li>
+                    <li><strong>ENS Casablanca (2025-26):</strong> Enseignement en Modélisation Stochastique & Analyse Statistique.</li>
+                    <li><strong>Ministère Éduc. Nationale (2016-24):</strong> Professeur de Mathématiques.</li>
                     <li><strong>Consultant Indépendant (2022-23):</strong> Ingénierie de cursus e-Learning gamifiés sur plateformes LMS.</li>
                 </ul>
             </div>
@@ -129,11 +151,19 @@
                 <li>DataOps Developer (DataOps.live) | Advanced SQL (HackerRank) | Spark Fundamentals (IBM)</li>
             </ul>
 
-            <h2 data-i18n="pub_title" style="margin-top: 20px;">PUBLICATIONS SCIENTIFIQUES</h2>
+            <h2 data-i18n="pub_title" style="margin-top: 30px;">PUBLICATIONS SCIENTIFIQUES</h2>
             <ul>
-                <li><i>Interface Homogenization of a Periodic Array of Linear Viscoelastic Inclusions : A Matched Asymptotic Expansion Approach for Helmholtz problem.</i></li>
+                <li>
+                    <a href="https://scholar.google.com/scholars" target="_blank" class="pub-link">
+                        <i>Interface Homogenization of a Periodic Array of Linear Viscoelastic Inclusions : A Matched Asymptotic Expansion Approach for Helmholtz problem.</i>
+                    </a>
+                </li>
             </ul>
         </section>
+        
+        <footer>
+            <p data-i18n="footer_text">© 2026 Mounir JAOUHARI. Tous droits réservés.</p>
+        </footer>
     </div>
 
     <script src="script.js"></script>

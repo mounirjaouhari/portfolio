@@ -1,6 +1,13 @@
 const translations = {
     fr: {
         location: "Casablanca, Maroc",
+        
+        download_cv: "Télécharger mon CV (PDF)",
+        cv_link: "cv_mounir_jaouhari.pdf",
+
+        welcome_title: "BIENVENUE SUR MON PORTFOLIO",
+        welcome_desc: "Bonjour ! Je suis Mounir, passionné par la modélisation mathématique et l'ingénierie des données. Sur cette page, vous découvrirez mon parcours hybride, mêlant recherche scientifique rigoureuse et développement de solutions industrielles robustes.",
+
         profile_title: "PROFIL PROFESSIONNEL",
         profile_desc: "Ingénieur de Données & Chercheur (Doctorant) fusionnant la Rigueur Mathématique (Science des Données) et l'Excellence Opérationnelle (Ingénierie des Données). Je conçois des architectures de données robustes, transformant des modèles théoriques complexes en flux de données industriels fiables et performants.",
         
@@ -10,7 +17,7 @@ const translations = {
         job1_desc: `<li>Architecture d’un système distribué (Apache NiFi → Kafka → ClickHouse) pour l’ingestion massive de flux IoT hétérogènes.</li>
                     <li>Déploiement opérationnel de modèles prédictifs (RandomForest, XGBoost) et d’un assistant IA générative (API Agri-Copilot) pour l’agriculture de précision.</li>
                     <li>Mise en œuvre d’une gouvernance stricte des données garantissant une intégrité de 99,98%.</li>
-                    <li><strong>Environnement Technique :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit.</li>`,
+                    <li><strong>Environnement Technique :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit. <a href="https://github.com/mounirjaouhari" target="_blank" class="code-link">[Code Source]</a></li>`,
         job2_title: "Doctorant-Chercheur en Mathématiques Appliquées",
         job2_date: "Déc. 2020 – À ce jour",
         job2_desc: `<li>Modélisation avancée de systèmes complexes (Équations aux Dérivées Partielles) et simulation numérique (Méthode des Éléments Finis - FEM) via Python (NumPy, SciPy, Pandas).</li>
@@ -41,10 +48,19 @@ const translations = {
                     <li>AWS Academy Data Engineering | GCP Data Engineering</li>
                     <li>Azure ML Pipelines (Coursera) | Hugging Face Fine-tuning LLM</li>
                     <li>DataOps Developer (DataOps.live) | Advanced SQL (HackerRank) | Spark Fundamentals (IBM)</li>`,
-        pub_title: "PUBLICATIONS SCIENTIFIQUES"
+        pub_title: "PUBLICATIONS SCIENTIFIQUES",
+        
+        footer_text: "© 2026 Mounir JAOUHARI. Tous droits réservés."
     },
     en: {
         location: "Casablanca, Morocco",
+        
+        download_cv: "Download my CV (PDF)",
+        cv_link: "cv_mounir_jaouhari_english.pdf",
+
+        welcome_title: "WELCOME TO MY PORTFOLIO",
+        welcome_desc: "Hello! I am Mounir, passionate about mathematical modeling and data engineering. On this page, you will discover my dual background combining rigorous scientific research and the development of robust industrial solutions.",
+
         profile_title: "PROFESSIONAL PROFILE",
         profile_desc: "Data Engineer & Ph.D. Candidate combining Mathematical Rigor (Data Science) and Technical Pragmatism (Data Engineering). I develop complete value chains, transforming theoretical models into operational and reliable data pipelines.",
         
@@ -54,7 +70,7 @@ const translations = {
         job1_desc: `<li>Designed a distributed data architecture (Apache NiFi → Kafka → ClickHouse) for heterogeneous IoT data ingestion.</li>
                     <li>Deployed predictive models (RandomForest, XGBoost) and a RAG assistant (Agri-Copilot API) for precision agriculture.</li>
                     <li>Implemented strict governance (JSON Schema Validation, DLQ) ensuring 99.98% data integrity.</li>
-                    <li><strong>Stack :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit.</li>`,
+                    <li><strong>Stack :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit. <a href="https://github.com/mounirjaouhari" target="_blank" class="code-link">[Source Code]</a></li>`,
         job2_title: "Ph.D. Researcher in Applied Mathematics",
         job2_date: "Dec. 2020 – Present",
         job2_desc: `<li>Modeling of complex systems (PDE) and numerical simulation (FEM) in Python (NumPy, SciPy, Pandas).</li>
@@ -84,14 +100,32 @@ const translations = {
         cert_desc: `<li>Microsoft Innovative Educator Expert (2023-2026)</li>
                     <li>AWS Data Eng. | GCP Data Eng. | Azure ML | Hugging Face LLM</li>
                     <li>DataOps Developer | Advanced SQL | Spark Fundamentals | Agile</li>`,
-        pub_title: "SCIENTIFIC PUBLICATIONS"
+        pub_title: "SCIENTIFIC PUBLICATIONS",
+        
+        footer_text: "© 2026 Mounir JAOUHARI. All rights reserved."
     }
 };
 
 const btnFr = document.getElementById("btn-fr");
 const btnEn = document.getElementById("btn-en");
 const htmlTag = document.getElementById("html-tag");
+const cvLink = document.getElementById("download-cv");
+const themeToggle = document.getElementById("theme-toggle");
 
+// DARK MODE LOGIC
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const icon = themeToggle.querySelector("i");
+    if (document.body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+    } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+    }
+});
+
+// TRANSLATION LOGIC
 function switchLang(lang) {
     htmlTag.lang = lang;
     
@@ -111,7 +145,12 @@ function switchLang(lang) {
         }
     });
 
-    // Update buttons
+    // Update Download Link
+    if (cvLink) {
+        cvLink.href = translations[lang]["cv_link"];
+    }
+
+    // Update buttons UI
     if (lang === 'fr') {
         btnFr.classList.add('active');
         btnEn.classList.remove('active');
