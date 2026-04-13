@@ -6,6 +6,7 @@ const translations = {
         nav_skills: "Compétences",
         nav_exp: "Expérience",
         nav_edu: "Formation",
+        nav_projects: "Projets",
         nav_articles: "Publications",
         nav_contact: "Contact",
         
@@ -38,6 +39,12 @@ const translations = {
         edu1_desc: "Architecture Big Data, DataOps, Traitement en Flux (Streaming), ML/DL, Cloud.",
         edu2_title: "Doctorat Mathématiques Appliquées",
         edu2_desc: "Modélisation de la propagation d'ondes (Analyse Numérique, Simulation FEM).",
+        
+        proj_title: "Mes",
+        proj1_title: "Système IoT Distribué",
+        proj1_desc: "Architecture de streaming temps réel avec Apache NiFi et Kafka pour le traitement massif de données géospatiales.",
+        proj2_title: "Simulations Helmholtz",
+        proj2_desc: "Modélisation mathématique du problème de Helmholtz hétérogène et simulation numérique (Acoustique / Electromagnétisme).",
         edu3_title: "Master Mathématiques",
         edu3_desc: "Analyse Numérique, Probabilités-Statistiques, Algorithmique Avancée.",
         
@@ -65,6 +72,7 @@ const translations = {
         nav_skills: "Skills",
         nav_exp: "Experience",
         nav_edu: "Education",
+        nav_projects: "Projects",
         nav_articles: "Publications",
         nav_contact: "Contact",
         
@@ -96,8 +104,12 @@ const translations = {
         edu1_title: "Data Engineering Cert.",
         edu1_desc: "Big Data Architecture, DataOps, Streaming, ML/DL, Cloud Architecture.",
         edu2_title: "Ph.D. Applied Mathematics",
-        edu2_desc: "Wave Propagation Modeling (Numerical Analysis, FEM Simulation).",
-        edu3_title: "Master in Mathematics",
+        edu2_desc: "Wave Propagation Modeling (Numerical Analysis, FEM Simulation).",        
+        proj_title: "My",
+        proj1_title: "Distributed IoT System",
+        proj1_desc: "Real-time streaming architecture with Apache NiFi and Kafka for massive geospatial data processing.",
+        proj2_title: "Helmholtz Simulations",
+        proj2_desc: "Mathematical modeling of the heterogeneous Helmholtz problem and numerical simulation (Acoustics / Electromagnetism).",        edu3_title: "Master in Mathematics",
         edu3_desc: "Numerical Analysis, Probability-Statistics, Advanced Algorithms.",
         
         pub_title: "My",
