@@ -1,156 +1,154 @@
+/* ===== TRANSLATIONS & CONSTANTS ===== */
 const translations = {
     fr: {
-        location: "Casablanca, Maroc",
+        nav_home: "Accueil",
+        nav_about: "À propos",
+        nav_skills: "Compétences",
+        nav_exp: "Expérience",
+        nav_edu: "Formation",
         
-        download_cv: "Télécharger mon CV (PDF)",
+        home_hi: "Bonjour, je suis",
+        home_im: "Je suis ",
+        home_btn: "Télécharger mon CV",
         cv_link: "cv_mounir_jaouhari.pdf",
-
-        welcome_title: "BIENVENUE SUR MON PORTFOLIO",
-        welcome_desc: "Bonjour ! Je suis Mounir, passionné par la modélisation mathématique et l'ingénierie des données. Sur cette page, vous découvrirez mon parcours hybride, mêlant recherche scientifique rigoureuse et développement de solutions industrielles robustes.",
-
-        profile_title: "PROFIL PROFESSIONNEL",
-        profile_desc: "Ingénieur de Données & Chercheur (Doctorant) fusionnant la Rigueur Mathématique (Science des Données) et l'Excellence Opérationnelle (Ingénierie des Données). Je conçois des architectures de données robustes, transformant des modèles théoriques complexes en flux de données industriels fiables et performants.",
         
-        exp_title: "EXPÉRIENCE PROFESSIONNELLE",
-        job1_title: "Ingénieur de Données - Projet VertiFlow",
-        job1_date: "Déc. 2025 – Fév. 2026",
-        job1_desc: `<li>Architecture d’un système distribué (Apache NiFi → Kafka → ClickHouse) pour l’ingestion massive de flux IoT hétérogènes.</li>
-                    <li>Déploiement opérationnel de modèles prédictifs (RandomForest, XGBoost) et d’un assistant IA générative (API Agri-Copilot) pour l’agriculture de précision.</li>
-                    <li>Mise en œuvre d’une gouvernance stricte des données garantissant une intégrité de 99,98%.</li>
-                    <li><strong>Environnement Technique :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit. <a href="https://github.com/mounirjaouhari/Vertiflow" target="_blank" class="code-link">[Code Source]</a></li>`,
-        job2_title: "Doctorant-Chercheur en Mathématiques Appliquées",
-        job2_date: "Déc. 2020 – À ce jour",
-        job2_desc: `<li>Modélisation avancée de systèmes complexes (Équations aux Dérivées Partielles) et simulation numérique (Méthode des Éléments Finis - FEM) via Python (NumPy, SciPy, Pandas).</li>
-                    <li>Développement d’algorithmes d’optimisation et production de publications scientifiques.</li>`,
-        job3_title: "Enseignant & Consultant Pédagogique",
-        job3_desc: `<li><strong>ENS Casablanca (2025-26):</strong> Enseignement en Modélisation Stochastique & Analyse Statistique.</li>
-                    <li><strong>Ministère Éduc. Nationale (2016-24):</strong> Professeur de Mathématiques.</li>
-                    <li><strong>Consultant Indépendant (2022-23):</strong> Ingénierie de cursus e-Learning gamifiés sur plateformes LMS.</li>`,
-
-        edu_title: "FORMATION ACADÉMIQUE",
-        edu1_title: "Certification Ingénierie des Données (Data Engineering)",
-        edu1_desc: "Architecture Big Data, DataOps, Traitement en Flux (Streaming), ML/DL, Cloud (AWS, Azure, GCP).",
-        edu2_title: "Doctorat en Mathématiques Appliquées",
-        edu2_date: "2020 – À ce jour",
-        edu2_desc: "Sujet : Modélisation de la propagation d'ondes (Analyse Numérique, Simulation FEM).",
-        edu3_title: "Master Mathématiques et Applications",
+        about_title: "À propos de",
+        about_subtitle: "Ingénieur de Données & Chercheur en Mathématiques Appliquées",
+        about_desc: "Je fusionne la rigueur mathématique et l'excellence opérationnelle de l'ingénierie des données. Mon objectif est de concevoir des architectures de données robustes, transformant des modèles théoriques complexes en flux de données industriels fiables et performants. J'opère sur la totalité de la chaîne de valeur, de l'ingestion de données en temps réel aux modèles prédictifs.",
+        
+        skills_title: "Mes",
+        skill_de: "Ingénierie des Données",
+        skill_cloud: "Cloud Computing",
+        skill_ds: "Science des Données",
+        skill_tools: "Outils & Méthodes",
+        
+        exp_title: "Mon",
+        job1_title: "Ingénieur de Données - VertiFlow",
+        job1_desc: "Architecture d’un système distribué (NiFi → Kafka → ClickHouse) pour IoT. Modèles prédictifs et IA générative avec 99.98% d'intégrité.",
+        code_btn: "Code Source",
+        job2_title: "Doctorant-Chercheur",
+        job2_desc: "Modélisation avancée de systèmes complexes (EDP) et simulation numérique (FEM) via Python. Développement d'algorithmes d'optimisation.",
+        job3_title: "Enseignant & Consultant",
+        job3_desc: "Enseignement en Modélisation Stochastique & Analyse Statistique. Ingénierie de cursus e-learning gamifiés sur plateformes LMS.",
+        
+        edu_title: "Ma",
+        edu1_title: "Certification Data Engineering",
+        edu1_desc: "Architecture Big Data, DataOps, Traitement en Flux (Streaming), ML/DL, Cloud.",
+        edu2_title: "Doctorat Mathématiques Appliquées",
+        edu2_desc: "Modélisation de la propagation d'ondes (Analyse Numérique, Simulation FEM).",
+        edu3_title: "Master Mathématiques",
         edu3_desc: "Analyse Numérique, Probabilités-Statistiques, Algorithmique Avancée.",
-
-        skills_title: "COMPÉTENCES TECHNIQUES",
-        skills_desc: `<li><strong>Ingénierie des Données :</strong> SQL, Apache NiFi, Kafka, ClickHouse, Docker, Airflow, Spark.</li>
-                      <li><strong>Cloud Computing :</strong> AWS, GCP, Azure.</li>
-                      <li><strong>Science des Données :</strong> Python (Pandas, NumPy, Scikit-learn, PyTorch), R, NLP.</li>
-                      <li><strong>Outils & Méthodes :</strong> Git/GitHub, Jira, LaTeX, Linux.</li>
-                      <li><strong>Langues :</strong> Français (Excellent), Anglais (Professionnel), Arabe (Natif).</li>`,
-
-        cert_title: "CERTIFICATIONS & DISTINCTIONS",
-        cert_desc: `<li>Microsoft Innovative Educator Expert (2023-2026)</li>
-                    <li>AWS Academy Data Engineering | GCP Data Engineering</li>
-                    <li>Azure ML Pipelines (Coursera) | Hugging Face Fine-tuning LLM</li>
-                    <li>DataOps Developer (DataOps.live) | Advanced SQL (HackerRank) | Spark Fundamentals (IBM)</li>`,
-        pub_title: "PUBLICATIONS SCIENTIFIQUES",
         
-        footer_text: "© 2026 Mounir JAOUHARI. Tous droits réservés."
+        footer_text: "Conçu avec passion © 2026 Mounir JAOUHARI. Tous droits réservés.",
+        
+        typed_strings: ["Ingénieur de Données", "Doctorant-Chercheur", "Développeur Python", "Consultant"],
+        doc_title: "Mounir JAOUHARI | Portfolio"
     },
     en: {
-        location: "Casablanca, Morocco",
+        nav_home: "Home",
+        nav_about: "About",
+        nav_skills: "Skills",
+        nav_exp: "Experience",
+        nav_edu: "Education",
         
-        download_cv: "Download my CV (PDF)",
+        home_hi: "Hello, I am",
+        home_im: "I am a ",
+        home_btn: "Download CV",
         cv_link: "cv_mounir_jaouhari_english.pdf",
-
-        welcome_title: "WELCOME TO MY PORTFOLIO",
-        welcome_desc: "Hello! I am Mounir, passionate about mathematical modeling and data engineering. On this page, you will discover my dual background combining rigorous scientific research and the development of robust industrial solutions.",
-
-        profile_title: "PROFESSIONAL PROFILE",
-        profile_desc: "Data Engineer & Ph.D. Candidate combining Mathematical Rigor (Data Science) and Technical Pragmatism (Data Engineering). I develop complete value chains, transforming theoretical models into operational and reliable data pipelines.",
         
-        exp_title: "PROFESSIONAL EXPERIENCE",
-        job1_title: "Data Engineer - VertiFlow Project",
-        job1_date: "Dec. 2025 – Feb. 2026",
-        job1_desc: `<li>Designed a distributed data architecture (Apache NiFi → Kafka → ClickHouse) for heterogeneous IoT data ingestion.</li>
-                    <li>Deployed predictive models (RandomForest, XGBoost) and a RAG assistant (Agri-Copilot API) for precision agriculture.</li>
-                    <li>Implemented strict governance (JSON Schema Validation, DLQ) ensuring 99.98% data integrity.</li>
-                    <li><strong>Stack :</strong> Python, Apache NiFi, Kafka, ClickHouse, Docker, GCP, FastAPI, Streamlit. <a href="https://github.com/mounirjaouhari/Vertiflow" target="_blank" class="code-link">[Source Code]</a></li>`,
-        job2_title: "Ph.D. Researcher in Applied Mathematics",
-        job2_date: "Dec. 2020 – Present",
-        job2_desc: `<li>Modeling of complex systems (PDE) and numerical simulation (FEM) in Python (NumPy, SciPy, Pandas).</li>
-                    <li>Designed optimization algorithms and authored scientific publications.</li>`,
-        job3_title: "Adjunct Professor & Pedagogical Consultant",
-        job3_desc: `<li><strong>ENS Casablanca (2025-26):</strong> Teaching Stochastic Modeling & Statistical Analysis.</li>
-                    <li><strong>Ministry of National Education (2016-24):</strong> Mathematics Professor (8 years).</li>
-                    <li><strong>Consultant (2022-23):</strong> Designed gamified e-Learning curricula (LMS) and technical documentation.</li>`,
-
-        edu_title: "EDUCATION",
-        edu1_title: "Data Engineering Certification",
-        edu1_desc: "Data Engineering, DataOps, Streaming, ML/DL, Cloud (AWS, Azure, GCP).",
-        edu2_title: "Ph.D. in Applied Mathematics",
-        edu2_date: "2020 – Present",
-        edu2_desc: "Subject: Wave Propagation Modeling (Numerical Analysis, FEM Simulation).",
-        edu3_title: "Master in Mathematics and Applications",
-        edu3_desc: "Numerical Analysis, Probability-Statistics, Algorithms.",
-
-        skills_title: "TECHNICAL SKILLS",
-        skills_desc: `<li><strong>Data Engineering :</strong> SQL, NiFi, Kafka, ClickHouse, Docker, Airflow, Spark.</li>
-                      <li><strong>Cloud :</strong> AWS, GCP, Azure.</li>
-                      <li><strong>Data Science :</strong> Python (Pandas, NumPy, Scikit-learn, PyTorch), R, NLP.</li>
-                      <li><strong>Tools :</strong> Git/GitHub, Jira, LaTeX, Linux.</li>
-                      <li><strong>Languages :</strong> French (Full Professional), English (Professional), Arabic (Native).</li>`,
-
-        cert_title: "CERTIFICATIONS & AWARDS",
-        cert_desc: `<li>Microsoft Innovative Educator Expert (2023-2026)</li>
-                    <li>AWS Data Eng. | GCP Data Eng. | Azure ML | Hugging Face LLM</li>
-                    <li>DataOps Developer | Advanced SQL | Spark Fundamentals | Agile</li>`,
-        pub_title: "SCIENTIFIC PUBLICATIONS",
+        about_title: "About",
+        about_subtitle: "Data Engineer & Ph.D. Candidate in Applied Mathematics",
+        about_desc: "I combine Mathematical Rigor and Technical Pragmatism. My goal is to design robust data architectures, transforming complex theoretical models into reliable industrial data pipelines. I work across the entire value chain, from real-time data ingestion to advanced predictive modeling.",
         
-        footer_text: "© 2026 Mounir JAOUHARI. All rights reserved."
+        skills_title: "My",
+        skill_de: "Data Engineering",
+        skill_cloud: "Cloud Computing",
+        skill_ds: "Data Science",
+        skill_tools: "Tools & Methods",
+        
+        exp_title: "My",
+        job1_title: "Data Engineer - VertiFlow",
+        job1_desc: "Designed distributed architecture (NiFi → Kafka → ClickHouse) for IoT. Predict models & generative AI with 99.98% integrity.",
+        code_btn: "Source Code",
+        job2_title: "Ph.D. Researcher",
+        job2_desc: "Modeling of complex systems (PDE) and numerical simulation (FEM) in Python. Optimization algorithms design.",
+        job3_title: "Professor & Consultant",
+        job3_desc: "Teaching Stochastic Modeling & Statistics. Designed gamified e-Learning curricula and LMS engineering.",
+        
+        edu_title: "My",
+        edu1_title: "Data Engineering Cert.",
+        edu1_desc: "Big Data Architecture, DataOps, Streaming, ML/DL, Cloud Architecture.",
+        edu2_title: "Ph.D. Applied Mathematics",
+        edu2_desc: "Wave Propagation Modeling (Numerical Analysis, FEM Simulation).",
+        edu3_title: "Master in Mathematics",
+        edu3_desc: "Numerical Analysis, Probability-Statistics, Advanced Algorithms.",
+        
+        footer_text: "Designed with passion © 2026 Mounir JAOUHARI. All rights reserved.",
+        
+        typed_strings: ["Data Engineer", "Ph.D. Researcher", "Python Developer", "Consultant"],
+        doc_title: "Mounir JAOUHARI | Portfolio"
     }
 };
 
-const btnFr = document.getElementById("btn-fr");
-const btnEn = document.getElementById("btn-en");
-const htmlTag = document.getElementById("html-tag");
-const cvLink = document.getElementById("download-cv");
-const themeToggle = document.getElementById("theme-toggle");
+/* ===== MENU & SCROLL ===== */
+$(document).ready(function(){
+    $('#menu').click(function(){
+        $(this).toggleClass('fa-times');
+        $('.navbar').toggleClass('active');
+    });
 
-// DARK MODE LOGIC
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    const icon = themeToggle.querySelector("i");
-    if (document.body.classList.contains("dark-mode")) {
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-    } else {
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-    }
+    $(window).on('scroll load', function(){
+        $('#menu').removeClass('fa-times');
+        $('.navbar').removeClass('active');
+
+        // Scroll Spy
+        $('section').each(function(){
+            let top = $(window).scrollTop();
+            let height = $(this).height();
+            let offset = $(this).offset().top - 200;
+            let id = $(this).attr('id');
+
+            if(top >= offset && top < offset + height){
+                $('.navbar ul li a').removeClass('active');
+                $('.navbar').find(`[href="#${id}"]`).addClass('active');
+            }
+        });
+    });
 });
 
-// TRANSLATION LOGIC
+/* ===== TYPED.JS ===== */
+let typedInstance;
+function initTyped(strings) {
+    if(typedInstance) typedInstance.destroy();
+    typedInstance = new Typed('.typing-text', {
+        strings: strings,
+        loop: true,
+        typeSpeed: 50,
+        backSpeed: 25,
+        backDelay: 1500
+    });
+}
+// Init par défaut en Français
+initTyped(translations['fr'].typed_strings);
+
+/* ===== TRANSLATION LOGIC ===== */
+const btnFr = document.getElementById("btn-fr");
+const btnEn = document.getElementById("btn-en");
+const cvLink = document.getElementById("download-cv");
+
 function switchLang(lang) {
-    htmlTag.lang = lang;
+    document.documentElement.lang = lang;
+    document.title = translations[lang].doc_title;
     
-    // Update texts
-    document.querySelectorAll("[data-i18n]").forEach(element => {
-        const key = element.getAttribute("data-i18n");
-        if (translations[lang][key]) {
-            element.textContent = translations[lang][key];
+    $("[data-i18n]").each(function() {
+        const key = $(this).attr("data-i18n");
+        if(translations[lang][key]) {
+            $(this).text(translations[lang][key]);
         }
     });
 
-    // Update HTML content
-    document.querySelectorAll("[data-i18n-html]").forEach(element => {
-        const key = element.getAttribute("data-i18n-html");
-        if (translations[lang][key]) {
-            element.innerHTML = translations[lang][key];
-        }
-    });
+    if(cvLink) cvLink.href = translations[lang].cv_link;
 
-    // Update Download Link
-    if (cvLink) {
-        cvLink.href = translations[lang]["cv_link"];
-    }
-
-    // Update buttons UI
     if (lang === 'fr') {
         btnFr.classList.add('active');
         btnEn.classList.remove('active');
@@ -158,97 +156,53 @@ function switchLang(lang) {
         btnEn.classList.add('active');
         btnFr.classList.remove('active');
     }
+    
+    initTyped(translations[lang].typed_strings);
 }
-
 btnFr.addEventListener("click", () => switchLang('fr'));
 btnEn.addEventListener("click", () => switchLang('en'));
 
-
-// --- SCROLL ANIMATIONS ---
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -20px 0px"
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('section, header').forEach(el => {
-    el.classList.add('animate-section');
-    observer.observe(el);
+/* ===== VISIBILITY CHANGE (Come Back Feature) ===== */
+let currentTitle = document.title;
+document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'visible') {
+        document.title = currentTitle;
+    } else {
+        currentTitle = document.title;
+        document.title = "Revenez bientôt ! 👋";
+    }
 });
 
-// --- DATA NETWORK ANIMATION (CANVAS) ---
-// Symbolise les flux de données (Data Engineering) et les graphes (Mathématiques)
-const canvas = document.getElementById('bg-canvas');
-const ctx = canvas.getContext('2d');
-let width, height, particles;
+/* ===== VANILLA TILT ===== */
+VanillaTilt.init(document.querySelectorAll(".tilt"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.2
+});
 
-function initCanvas() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-    particles = [];
-    // Densité ajustée pour ne pas surcharger
-    const particleCount = Math.min(Math.floor(window.innerWidth / 20), 100); 
-    
-    for (let i = 0; i < particleCount; i++) {
-        particles.push({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.6,
-            vy: (Math.random() - 0.5) * 0.6,
-            radius: Math.random() * 2 + 1.5
-        });
-    }
-}
+/* ===== SCROLL REVEAL ===== */
+ScrollReveal().reveal('.heading', { delay: 200, origin: 'top', distance: '50px' });
+ScrollReveal().reveal('.about .content', { delay: 400, origin: 'bottom', distance: '50px' });
+ScrollReveal().reveal('.skills .box', { delay: 300, origin: 'bottom', distance: '50px', interval: 200 });
+ScrollReveal().reveal('.timeline .container', { delay: 300, origin: 'bottom', distance: '50px', interval: 200 });
+ScrollReveal().reveal('.education .box', { delay: 300, origin: 'bottom', distance: '50px', interval: 200 });
 
-function drawNetwork() {
-    ctx.clearRect(0, 0, width, height);
-    
-    const isDark = document.body.classList.contains('dark-mode');
-    const color = isDark ? 'rgba(77, 163, 255,' : 'rgba(0, 86, 179,';
-    
-    particles.forEach((p, i) => {
-        p.x += p.vx;
-        p.y += p.vy;
-        
-        // Rebondir sur les bords
-        if (p.x < 0 || p.x > width) p.vx *= -1;
-        if (p.y < 0 || p.y > height) p.vy *= -1;
-        
-        // Dessiner le point (nœud de donnée)
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = color + ' 0.6)';
-        ctx.fill();
-        
-        // Dessiner les connexions (graphe, flux de données)
-        for (let j = i + 1; j < particles.length; j++) {
-            const p2 = particles[j];
-            const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-            
-            if (dist < 130) {
-                ctx.beginPath();
-                ctx.moveTo(p.x, p.y);
-                ctx.lineTo(p2.x, p2.y);
-                ctx.strokeStyle = color + ` ${1 - dist/130})`;
-                ctx.lineWidth = 1;
-                ctx.stroke();
-            }
-        }
-    });
-    
-    requestAnimationFrame(drawNetwork);
-}
-
-// Relancer l'animation si la fenêtre change de taille
-window.addEventListener('resize', initCanvas);
-
-// Démarrer
-initCanvas();
-drawNetwork();
+/* ===== PARTICLES.JS ===== */
+particlesJS('particles-js', {
+  "particles": {
+    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+    "color": { "value": "#011aff" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5, "random": false },
+    "size": { "value": 3, "random": true },
+    "line_linked": { "enable": true, "distance": 150, "color": "#011aff", "opacity": 0.4, "width": 1 },
+    "move": { "enable": true, "speed": 4, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+    "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+  },
+  "retina_detect": true
+});
