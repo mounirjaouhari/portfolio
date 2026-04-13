@@ -24,6 +24,8 @@ const translations = {
         skill_cloud: "Cloud Computing",
         skill_ds: "Science des Données",
         skill_tools: "Outils & Méthodes",
+        skill_math: "Modélisation Math.",
+        skill_math_desc: "Équations aux Dérivées Partielles (EDP), Méthodes des Éléments Finis (FEM), Analyse Numérique, Processus Stochastiques.",
         
         exp_title: "Mon",
         job1_title: "Ingénieur de Données - VertiFlow",
@@ -90,6 +92,8 @@ const translations = {
         skill_cloud: "Cloud Computing",
         skill_ds: "Data Science",
         skill_tools: "Tools & Methods",
+        skill_math: "Mathematical Modeling",
+        skill_math_desc: "Partial Differential Equations (PDE), Finite Element Methods (FEM), Numerical Analysis, Stochastic Processes.",
         
         exp_title: "My",
         job1_title: "Data Engineer - VertiFlow",
